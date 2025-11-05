@@ -14,7 +14,6 @@ const HeroSection = () => {
           building marketing tools to help our partners power travel worldwide.
           This is a space for me to share things I'm learning and creating.
         </p>
-        <a href={`https://gba.ninja/?autorun=https://bradenhirschi.com/flap-dx.gba`}>play</a>
       </div>
     </section>
   );
