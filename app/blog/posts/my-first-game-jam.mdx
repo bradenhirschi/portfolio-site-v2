@@ -1,0 +1,36 @@
+---
+title: 'My First Game Jam'
+publishedAt: '2026-02-03'
+summary: 'What I learned while participating in my first-ever game jam.'
+---
+
+Over the recent Christmas break, I decided to participate in my first game jam.
+
+I've been interested in game development as a hobby for a long time, and had started a few different
+small projects in the past, but had never really made anything that felt like a complete game of my own.
+
+I've tinkered a bit with a few different game engines, specifically Butano for GBA homebrew development with C++ and LibGDX for Java game development. These were both, however, more about improving my skills with the engines' programming languages (C++ and Java), and less about learning game design.
+
+The game jam I chose to join was [Lame Jam 57](https://itch.io/jam/lame-jam-57), which felt approachable due to its 72-hour length and inherently low-pressure theme. A short jam would allow me to limit the scope of my project idea and actually finish something small.
+
+Before the jam started, I needed to choose a game engine. After reviewing many options, I decided on Godot. Reasons it worked for me include:
+- It's free and open-source
+- It ships with an easy-to-use scripting language called GDScript
+- It's popular and has many tutorials
+- It can build for multiple platforms, including the web 
+
+When the jam started, the first thing I did was actually following [this](https://www.youtube.com/watch?v=LOhfqjmasi0) excellent Godot tutorial by Brackeys. This helped me get a good understanding of the basic tools used to build a simple platformer in Godot.
+
+To speed up the development of my project, I decided to build a platformer myself and reuse some of the components from the game I made using the Brackeys tutorial. The theme of the game jam was "Psychedelic", so after a few different ideas and playing some different platformers I saw on itch.io, I had an idea. I decided to make a one-room platformer, where the "psychedelic" effect is that your character's movements become hazards for you in the future.
+
+While thinking about the theme, I was inspired by the crazy bunny mad scientist guy from Poptropica, which I played as a kid. I made a simple pixel art bunny character wih crazy eyes, and honestly it looked really good the first try. That was totally a fluke I guess, I had never done pixel art before but yeah I felt really happy with my character design. I was going to use Aesprite for the pixel art as I had seen it recommended by some pixel art and game dev Youtubers, but they didn't have a build for ARM Linux so I ended up stumbling across Libresprite. Libresprite is an awesome tool, and it's free and open source! I also used it to make a simple carrot sprite and some platforms.
+
+I built a really simple game interface with a single room and several static platforms. The basic mechanics go like this: the bunny spawns on the screen and a carrot spawns somewhere else. You have to run and get the carrot, and once you grab it, a clone of your player character (I called them "echoes") spawns and runs along the same route you took to get there. It runs back and forth and if it touches you, you die. This happens again each time you get the next carrot, and the screen fills up with echoes. You get a point for each carrot you grab and the goal is to get as many as possible for a high score.
+
+I realized I had a problem: after a certain number of points the next carrot would just become impossible due to how many echoes were on the screen. So I decided that each echo would "phase out" after 3 carrots. I indicated this by the echoes growing gradually 33% more transparent with each successive carrot, then disappearing entirely after the third. 
+
+In my opinion the final game is actually surprisingly fun and feels balanced enough. I would love to spend some more time with this idea and make it into a proper classic arcade-style game. It would be especially cool to run it on my arcade cabinet at home.
+
+I learned a ton from this game jam and will definitely do another one sometime soon. A game jam is a perfect way for me to interact with the game development hobby, since sometimes I'll go through a short phase of obsession with a hobby and then lose interest entirely. This allowed me to start and finish a project in just a few days, and when I'm interested in game dev again I'll join another jam! I would highly recommend it for anyone interested in game development.
+
+You can play my game [here!](https://itch.io/jam/lame-jam-57/rate/4135246).
